@@ -1,3 +1,9 @@
+boost1.62 (1.62.0+dfsg-4ovs1) unstable; urgency=medium
+
+  * Open vStorage build for Ubuntu 14.04
+
+ -- Arne Redlich <arne.redlich@openvstorage.com>  Tue, 27 Jun 2017 12:43:45 +0200
+
 boost1.62 (1.62.0+dfsg-4) unstable; urgency=medium
 
   * New patch upstream-add-degree-reverse_graph.patch.

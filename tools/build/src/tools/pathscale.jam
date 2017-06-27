@@ -89,8 +89,6 @@ flags pathscale.compile OPTIONS <warnings-as-errors>on  : -Werror ;
 flags pathscale.compile OPTIONS <debug-symbols>on : -ggdb ;
 flags pathscale.compile OPTIONS <profiling>on     : -pg ;
 flags pathscale.compile OPTIONS <link>shared      : -fPIC ;
-flags pathscale.compile OPTIONS <address-model>32 : -m32 ;
-flags pathscale.compile OPTIONS <address-model>64 : -m64 ;
 
 flags pathscale.compile USER_OPTIONS <cflags> ;
 flags pathscale.compile.c++ USER_OPTIONS <cxxflags> ;

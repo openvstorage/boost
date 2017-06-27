@@ -163,8 +163,8 @@ override_dh_install:
 
 	dh_install --list-missing
 
-override_dh_strip:
-	dh_strip --dbgsym-migration='libboost1.55-dbg, libboost1.58-dbg, libboost1.61-dbg'
+#override_dh_strip:
+#	dh_strip --dbg-package=libboost1.62-dbg
 
 # set the number of build jobs
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -254,7 +254,7 @@ mk_debhelper_files = \
 		) \
 	)
 
-TOOLSET_CONFIG = 'using gcc : : $(DEB_HOST_GNU_TYPE)-g++-6 : <compileflags>"$(CPPFLAGS)" <cflags>"$(CFLAGS)" <cxxflags>"$(CXXFLAGS) -Wno-unused-local-typedefs" <linkflags>"$(LDFLAGS)" ;'
+TOOLSET_CONFIG = 'using gcc : : $(DEB_HOST_GNU_TYPE)-g++-4.9 : <compileflags>"$(CPPFLAGS)" <cflags>"$(CFLAGS)" <cxxflags>"$(CXXFLAGS) -std=c++14 -Wno-unused-local-typedefs" <linkflags>"$(LDFLAGS)" ;'
 BUILD_CONTEXT = yes
 BUILD_LONG_DOUBLE = yes
 
